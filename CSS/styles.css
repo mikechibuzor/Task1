@@ -1,0 +1,506 @@
+/*CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 100%;
+  font-family: "Bell MT";
+}
+.container {
+  background-color: blue;
+  height: auto;
+  padding: 1em 1.2em 0.3em 3.7em;
+}
+.container .content {
+  border-radius: 0.5em;
+  background-color: #ffffff;
+}
+.container .content .firstPage {
+  height: auto;
+}
+.container .content .header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7rem 0.5rem 5rem;
+  overflow: hidden;
+}
+.container .content .header .circle {
+  height: 260%;
+  width: 7%;
+  position: relative;
+  margin-left: 17%;
+}
+.container .content .header .circle .circ {
+  height: 100%;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgb(201, 67, 18);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -40%;
+}
+.container .content .header .circle .circ::before {
+  position: absolute;
+  content: "";
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: white;
+}
+.container .content .header .navbar ul {
+  list-style: none;
+}
+.container .content .header .navbar ul li {
+  display: inline-block;
+}
+.container .content .header .navbar ul li a {
+  text-decoration: none;
+  color: blue;
+  padding: 0.5rem 0rem;
+  margin-right: 1.3rem;
+  display: block;
+  transition: background 0.5s linear;
+  position: relative;
+}
+.container .content .header .navbar ul li .a::before {
+  content: "";
+  position: absolute;
+  bottom: -0.2em;
+  height: 0.1em;
+  border-radius: 0.1em;
+  background-color: blue;
+  right: 0;
+  width: 0%;
+  transition: all 0.67s linear;
+}
+.container .content .header .navbar ul li .a:hover::before {
+  width: 100%;
+  left: 0;
+}
+.container .content .header .navbar ul li a.active {
+  border: 0.5px solid blue;
+  border-radius: 1rem;
+  padding: 0.4rem 1.5rem;
+}
+.container .content .header .navbar ul li a.active:hover {
+  background-color: rgba(10, 15, 224, 0.5);
+  color: #eee;
+}
+.container .content .banner {
+  display: flex;
+}
+.container .content .banner .textContainer {
+  width: 60%;
+  padding: 12rem 8rem;
+}
+.container .content .banner .textContainer .text h1 {
+  font-size: 300%;
+}
+.container .content .banner .textContainer .text p {
+  color: blue;
+  margin: 1.5rem 0rem;
+}
+.container .content .banner .textContainer form {
+  display: flex;
+  margin-top: 1.5em;
+}
+.container .content .banner .textContainer form input {
+  padding: 0.8rem 1rem;
+  width: 70%;
+  border-radius: 1.5rem;
+  border: 1px solid #eee;
+  outline: none;
+  box-shadow: 2px 2px 12px #eee;
+}
+.container .content .banner .textContainer form button {
+  transition: all 0.5s ease-in-out;
+  background: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0.5rem 2.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  margin-left: -5%;
+}
+.container .content .banner .textContainer form button:hover {
+  background-color: rgb(201, 67, 18);
+  color: white;
+}
+.container .content .banner .textContainer .rect {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem 0 0;
+}
+.container .content .banner .textContainer .rect p {
+  transition: all 0.5s linear;
+  cursor: pointer;
+  color: blue;
+}
+.container .content .banner .textContainer .rect p:hover {
+  opacity: 0.69;
+}
+.container .content .banner .phone {
+  padding: 5rem;
+  width: 40%;
+}
+.container .content .banner .phone .phoneBody {
+  background: black;
+  border: 1px solid black;
+  width: 76%;
+  height: 73vh;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  z-index: 100;
+}
+.container .content .banner .phone .phoneBody .phoneContent {
+  padding: 2rem 0.5rem 0.5rem;
+  background: white;
+  border-radius: 1.5rem;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+}
+.container .content .banner .phone .phoneBody .phoneContent .head {
+  background: blue;
+  color: white;
+  padding: 1rem 0.8rem;
+  border-radius: 0.5rem;
+  display: grid;
+  font-size: 70%;
+}
+.banner .phone .phoneBody .phoneContent .head p {
+  font-size: 70%;
+  margin-top: 0.3rem;
+}
+.banner .phone .phoneBody .phoneContent .top {
+  position: absolute;
+  top: -1.5%;
+  border-radius: 0.5rem;
+  width: 50%;
+  height: 4%;
+  left: 25%;
+  background: black;
+}
+.banner .phone .phoneBody .phoneContent .phoneCircleContainer {
+  position: absolute;
+  width: 30%;
+  height: 15%;
+  top: -10%;
+  left: -32%;
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+.banner .phone .phoneBody .phoneContent .phoneCircleContainer .phoneCircle {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: relative;
+  left: 58%;
+  top: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner
+  .phone
+  .phoneBody
+  .phoneContent
+  .phoneCircleContainer
+  .phoneCircle::after {
+  position: absolute;
+  content: "";
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.last-part {
+  padding: 0 8rem;
+  margin-bottom: 5rem;
+}
+.last-part nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7rem;
+  margin-bottom: 1rem;
+}
+.last-part nav .divv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.last-part nav .divv::before {
+  content: "";
+  position: absolute;
+  height: 0.15rem;
+  background: silver;
+  width: 100%;
+  bottom: -0.2em;
+  left: -0.1rem;
+  border-radius: 0.5rem;
+}
+.last-part nav .divv::after,
+.last-part nav .divv.activve::after {
+  content: "";
+  position: absolute;
+  height: 0.15rem;
+  background: blue;
+  width: 0%;
+  bottom: -0.2em;
+  border-radius: 0.5rem;
+  transition: all 0.5s linear;
+}
+.last-part nav .divv.activve::after {
+  width: 70%;
+}
+.last-part nav .divv:hover::after {
+  width: 100%;
+}
+.last-part nav .divv h2 {
+  font-size: 130%;
+  text-align: center;
+  width: 100%;
+}
+.last-part .content {
+  border: 1px solid #eee;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+  border-radius: 1.3rem;
+  box-shadow: 1px 1px 1px #eee, -1px -1px 1px #eee;
+  margin-top: 3rem;
+}
+
+.last-part .content .div1 {
+  grid-column: 1/3;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  grid-row: 1/7;
+  border-radius: 0.5rem;
+}
+.last-part .content .div1 h2 {
+  font-size: 187%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.last-part .content .div1 .main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.last-part .content .div1 .main p {
+  background: rgba(184, 180, 180, 0.3);
+  margin-top: 2.5rem;
+  padding: 0.7rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.last-part .content .div1 .list ul {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+.last-part .content .div1 .list ul li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.2rem 4.5rem 0.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.last-part .content .div1 .list ul li:nth-of-type(1).activeList {
+  border-left: 2px solid blue;
+}
+.last-part .content .div1 .list ul li:hover {
+  border-left: 2px solid blue;
+}
+.last-part .content .div1 .list ul li > * {
+  color: blue;
+  padding: 0.2rem 0.8rem;
+}
+.last-part .content .div2 {
+  grid-column: 3/11;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.2rem 0rem 2.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.last-part .content .div2 .searchContainer {
+  flex: 0 0 45%;
+  background: rgba(184, 180, 180, 0.1);
+  border-radius: 1rem;
+}
+.last-part .content .div2 .searchContainer form {
+  display: flex;
+}
+.last-part .content .div2 .searchContainer form input {
+  padding: 0.5rem;
+  flex: 0 0 90%;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+.last-part .content .div2 .searchContainer form button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  flex: 0 0 10%;
+}
+.last-part .content .div2 .otherHalf {
+  flex: 0 0 50%;
+  display: flex;
+}
+.last-part .content .div2 .otherHalf p:nth-of-type(1) {
+  cursor: pointer;
+  padding: 0.5rem 1.78rem;
+  background-color: blue;
+  color: white;
+  border-radius: 1rem;
+  flex: 0 0 35%;
+}
+.last-part .content .div2 .otherHalf p:nth-of-type(2),
+.last-part .content .div2 .otherHalf p:nth-of-type(3) {
+  flex: 0 0 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.last-part .content .div2 .otherHalf p:nth-of-type(4) {
+  flex: 0 0 35%;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.last-part .content .div3 {
+  grid-column: 3/11;
+  grid-row: 2/8;
+  background: rgba(238, 235, 235, 0.3);
+  /* background-image: radial-gradient(
+    circle,
+    rgba(184, 180, 180, 0.3),
+    rgba(184, 180, 180, 0.5)
+  ); */
+  padding: 1rem;
+  color: white;
+}
+.last-part .content .div3 .box1 {
+  background: rgba(0, 0, 225, 0.8);
+  padding: 0.2em 0.2em 1.2em 1.2em;
+  border-radius: 1rem;
+  display: grid;
+}
+.last-part .content .div3 .box1 .cancel {
+  color: rgba(225, 225, 225, 0.88);
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  margin: 0.2rem;
+  justify-self: end;
+  align-self: end;
+  transition: all 0.1s linear;
+  border-radius: 0.1rem;
+}
+.last-part .content .div3 .box1 .cancel:hover {
+  color: #ffffff;
+  background: rgba(218, 15, 15, 0.7);
+}
+.last-part .content .div3 .box1 h2 {
+  margin-bottom: 0.8rem;
+  font-size: 180%;
+}
+.last-part .content .div3 .box1 .p {
+  width: 70%;
+  font-size: 105%;
+  line-height: 1.4rem;
+}
+.last-part .content .div3 .box1 a {
+  text-decoration: none;
+  color: white;
+  background: rgb(0, 0, 255);
+  margin-right: 2rem;
+  padding: 0.7rem 2rem;
+  border-radius: 1.3rem;
+  justify-self: end;
+}
+.last-part .content .div3 .box2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 1.5rem;
+}
+.last-part .content .div3 .box2 > * {
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  color: rgb(29, 28, 28);
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.last-part .content .div3 .box2 .title {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.last-part .content .div3 .box2 table {
+  padding: 0.5rem;
+  width: 100%;
+}
+.last-part .content .div3 .box2 table tr {
+  display: flex;
+}
+.last-part .content .div3 .box2 table tr > * {
+  flex: 0 0 33.33%;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.last-part .content .div3 .box2 table tr th {
+  background-color: rgba(184, 180, 180, 0.1);
+
+  border-bottom: 1px solid #eee;
+}
+.last-part .content .div3 .box2 table tr td {
+  color: rgb(117, 114, 114);
+  display: flex;
+  align-items: center;
+  font-size: 90%;
+  justify-content: center;
+}
+.last-part .content .div3 .box2 table tr td:nth-of-type(1) {
+  justify-content: space-between;
+  padding: 0 1.2rem 0rem 0.5rem;
+}
+.last-part .content .div3 .box2 .img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.last-part .content .div3 .box2 .img img {
+  border-radius: 50%;
+}
